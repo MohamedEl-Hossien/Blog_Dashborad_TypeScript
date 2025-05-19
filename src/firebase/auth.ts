@@ -15,12 +15,7 @@ import type { FormData } from "../utils";
  */
 export function getAuthToken(): string | null {
   const token: string | null = localStorage.getItem("firebaseToken");
-
-  if (!token) {
-    return null;
-  }
-
-  return token;
+  return token ? token : null;
 }
 
 /**
